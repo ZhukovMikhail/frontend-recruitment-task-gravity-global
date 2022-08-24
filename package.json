@@ -1,11 +1,16 @@
 {
   "name": "frontend-recruitment-task-gravity-global",
   "version": "2.0.0",
+  "main": "index.js",
   "description": "",
-  "homepage": "https://goitacademy.github.io/frontend-recruitment-task-gravity-global",
+  "homepage": "https://Zhukovmikhail.github.io/frontend-recruitment-task-gravity-global",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /frontend-recruitment-task-gravity-global/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhukovMikhail/frontend-recruitment-task-gravity-global.git"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
