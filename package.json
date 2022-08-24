@@ -1,23 +1,20 @@
 {
-  "name": "gravity-global-recruitment-task",
-  "version": "1.0.0",
+  "name": "frontend-recruitment-task-gravity-global",
+  "version": "2.0.0",
   "description": "",
-  "main": "index.js",
+  "homepage": "https://goitacademy.github.io/frontend-recruitment-task-gravity-global",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /frontend-recruitment-task-gravity-global/"
   },
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "modern-normalize": "^1.1.0"
+  },
   "devDependencies": {
-    "autoprefixer": "^9.6.0",
-    "cssnano": "^4.1.10",
-    "gulp": "^4.0.2",
-    "gulp-cli": "^2.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2"
-  }
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
