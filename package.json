@@ -6,16 +6,22 @@
   "homepage": "https://Zhukovmikhail.github.io/frontend-recruitment-task-gravity-global",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /frontend-recruitment-task-gravity-global/"
+    "build": "parcel build src/*.html --public-url /frontend-recruitment-task-gravity-global/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ZhukovMikhail/frontend-recruitment-task-gravity-global.git"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    
     "@parcel/transformer-sass": "^2.6.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
