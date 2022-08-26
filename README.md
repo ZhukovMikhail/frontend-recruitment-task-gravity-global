@@ -1,62 +1,58 @@
-# Zadanie rekrutacyjne GravityGlobal na frontend developera
+# Parcel boilerplate
 
-## Informacje wstępne
-Zadanie jest przeznaczone na każdy poziom umiejętności developera, dzieli się na poszczególne zadania,
-które są stopniowo coraz trudniejsze. Każdy powinien zrobić test na tyle ile aktualnie potrafi, gdyż
-poszukujemy bardzo często osób z różnym poziomem wiedzy.
+## Скрытые файлы
 
-Daj z siebie wszystko i zrób jak najwięcej potrafisz, lecz pamiętaj głównie liczy się jakość nie ilość, tak że prosimy
-o niespieszenie się z zadaniem, bo przede wszystkim zależy nam na jakości wykonanych zadań
-i kodu.
+Включите отображение скрытых файлов и папок в проводнике своей операционной системы, иначе вы не
+сможете выбрать и скопировать себе файлы настроек проекта, имена которых начинаются с точки.
 
-**Paczka projektu jest prawie pusta, dlatego wszystko zależy od Ciebie,
-w jakiej formie to trafi do nas**
+## Зависимости
 
-### Jak zacząć pracę
-Aktualny projekt gita należy **sforkować** do swojego prywatnego gita jako nowe repozytorium,
-które będzie dostępne publicznie. Na plus będzie wysyłanie konkretnych commitów,
-a nie wszystko w jednym commicie o nazwie np. 'all changes'.
+На компьютере должена быть установлена LTS-версия [Node.js](https://nodejs.org/en/) со всеми
+дополнительными инструментами кроме **Chocolatey** - его ставить не нужно.
 
-Dopuszczalne jest wysłanie rozwiązania w spakowanym archiwum, jednak robienie wszystkiego
-na gitcie jest rozwiązaniem milej widzianym.
+## Перед началом работы
 
-**Funkcjonalność powinny być pisane w czystym JSie (tzw. Vanilla JS), najlepiej ze standardami ES6**
+Один раз на проект установить все зависимости.
 
-#### Dla osób które chcą pisać w SCSS
-1. Zainstaluj wszystkie zależności potrzebne do rekompilowania styli gulpem -
-polecenie: 'npm install'
-2. Wystartuj główne zadanie gulpa polecenie: 'gulp' - będzie automatycznie kompilowało
-kod scss na css po każdej zmianie
+```shell
+npm ci
+```
 
-#### Dla osób które chca pisać w czystym CSS
+### Разработка
 
-Jeżeli ktoś nie potrafi pisać w SCSS bądź nie korzystał z tego wcześniej, to w folderze scr został przygotowany
-plik o rozszerzeniu css. **Tutaj warto dodać, że milej widziane są style pisane w SCSS**
+Запустить режим разработки.
 
-### Zadania
-1. Zmienić tytuł strony
-2. Stworzyć moduł/sekcję strony z podanego:
-    - moduł powinien być wedle designu [design](https://www.figma.com/file/dqY9uYrUYPyr5yjeECoy6X/Recruitment-Task). Aby móc czytać własności elementów, należy stworzyć sobie konto na figmie
-    - wymagane zdjęcia został już wyeksportowane, przeskalowane do kilku rozmiarów i znajdują się w folderze images
-    - moduł powinien spełniać wszelkie możliwe aspekty WCAG
-    - moduł powinien być responsywny, tutaj zostawiamy inwencję twórczą, robimy bez designu
-    - moduł powinien być w kontenerze o szerokości 1440px
-    - moduł powinien być dostosowany do wielokrotnego użycia go na stronie,
-    wszystkie funkcjonalności powinny być pisane per moduł, **to dotyczy też zadań poniżej**
-3. Dodać funkcjonalność po kliknięciu buttona
-    - po kliknięciu ma się otwierać popup
-    - kliknięcie poza popupa, automatycznie go zamyka
-    - każde kliknięcie przycisku musi być zliczane
-    - w popupie wyświetlamy ile razy użytkownik klikną w buttona
-    - ilość kliknięć w button ma być stale zapisana pod użytkownika,
-    tak aby po odświeżeniu strony wartość nie powinna być zerowana
-    - jeżeli ilość kliknięć przekroczy 5, w popupie powinien pokazać się przycisk do zresetowania licznika (inwencja twórcza)
+```shell
+npm run dev
+```
 
-### Co będziemy sprawdzać
-- Czy punkty w konkretnym zadaniu zostały spełnione
-- Responsywność
-- Inwencja twórcza
-- Jakość kodu
-- Poprawność semantyczna HTML
-- WCAG
-- Logikę rozwiązań funkcjonalnych
+Во вкладке браузера перейти по адресу [http://localhost:1234](http://localhost:1234).
+
+### Деплой
+
+Сборка будет автоматически собирать и деплоить продакшен версию проекта на GitHub Pages, в ветку
+`gh-pages`, каждый раз когда обновляется ветка `main`. Например, после прямого пуша или принятого
+пул-реквеста. Для этого необходимо в файле `package.json` отредактировать поле `homepage` и скрипт
+`build`, заменив `имя_пользователя` и `имя_репозитория` на свои.
+
+```json
+"homepage": "https://имя_пользователя.github.io/имя_репозитория",
+"scripts": {
+  "build": "parcel build src/*.html --public-url /имя_репозитория/"
+},
+```
+
+На всякий случай стоит зайти в настройки репозитория `Settings` > `Pages` и убедиться что продакшен
+версии файлов раздаются из папки `/root` ветки `gh-pages`.
+
+Через какое-то время живую страницу можно будет посмотреть по адресу указанному в отредактированном
+свойстве `homepage`, например
+[https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
+
+## Файлы и папки
+
+- Все паршалы файлов стилей должны лежать в папке `src/sass` и импортироваться в
+  `src/sass/main.scss`
+- Изображения добавляйте в папку `src/images`, заранее оптимизировав их. Сборщик просто копирует
+  используемые изображения чтобы не нагружать систему оптимизацией картинок, так как на слабых
+  компьютерах это может занять много времени.
